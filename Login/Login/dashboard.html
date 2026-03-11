@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>TrackDeck - dashboard</title>
+  </head>
+  <body>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+
+    <div class="edit_form-container">
+      <div class="edit-box">
+        <span class="notUpdate">
+          <i class="fa-solid fa-x"></i>
+        </span>
+        <div class="edit-heading">Update Profile</div>
+        <label for="edit-photo">
+          <div class="edit-pic"></div>
+          <input type="file" id="edit-photo" class="d" accept="image/jpeg, image/png, image/jpg">
+        </label>
+        <div class="edit_name-box">
+          <span class="edit-name-head">Name :</span>
+          <input type="text" class="edit-name form-name" placeholder=""/>
+        </div>
+        <div class="edit_name-box">
+          <span class="edit-name-head"> Email :</span>
+          <input type="email" class="edit-email form-email" />
+        </div>
+        <div class="edit-btn edit-form-btn form-btn">Update</div>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="header-innercnt">
+        <h1 class="heading-text">Welcome, jashjeet99@gmail.com</h1>
+        <div class="button-logout">Logout</div>
+      </div>
+    </div>
+    <div class="body-container">
+      <div class="upper-container">
+        <div class="boxes bg1">
+          <div class="title">
+            <div class="logo-1">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <h2>Total Users</h2>
+          </div>
+          <div class="user-number">1,200</div>
+        </div>
+        <div class="boxes bg2">
+          <div class="title">
+            <div class="logo-1">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+            </div>
+            <h2>Revenue</h2>
+          </div>
+          <div class="user-number">5,40,200</div>
+        </div>
+        <div class="boxes bg3">
+          <div class="title">
+            <div class="logo-1">
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            <h2>Notifications</h2>
+          </div>
+          <div class="user-number">8 <span class="alert">New Alerts</span></div>
+        </div>
+        <div class="boxes bg4">
+          <div class="title">
+            <div class="logo-1">✔</div>
+            <h2>Tasks Completed</h2>
+          </div>
+          <div class="user-number">
+            23 <span class="alert" style="margin-left: 10px">Tasks</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-container">
+        <div class="center-box1">
+          <div class="center-header">
+            <h3>Revenue Analytics</h3>
+            <div class="outer-box1">
+              <span class="revenue-chartbtn1 pd">Weekly</span>
+              <span class="revenue-chartbtn2 pd">Monthly</span>
+              <span class="revenue-chartbtn3 pd">Yearly</span>
+            </div>
+          </div>
+
+          <div class="revchart-box">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+
+        <div class="doughnut-box">
+          <div class="center-header2">
+            <h3 class="bar-task">Task Completion</h3>
+          </div>
+          <div class="doughnutchart-box">
+            <canvas id="myChart2"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="act_pro-container">
+        <div class="activity-box">
+          <div class="activity-heading">Recent Activities</div>
+          <div class="details-box">
+
+          </div>
+        </div>
+        <div class="activity-box profile-container">
+          <div class="activity-heading">User Profile</div>
+          <div class="profile-box">
+            <div class="profile-logo"></div>
+          </div>
+          <div class="login-box">
+            <span class="name-head">Jashjeet Singh</span>
+            <span class="email-head">jashjeet99@gmail.com</span>
+            <span class="duration-head">Member since: 2022</span>
+          </div>
+          <div class="editprofile-box">
+            <div class="edit-btn home-btn">Edit Profile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+  <script src="dashboard.js"></script>
+  <script src="charts.js"></script>
+</html>
+
+<!-- Done and Dusted -->
+<!-- All divs and spans are created -->
+<!-- :) -->

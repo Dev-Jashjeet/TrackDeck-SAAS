@@ -1,0 +1,108 @@
+(function userloggedIn(): void {
+    try {
+    let headerEmail = document.querySelector(".heading-text")! as HTMLBodyElement;
+    let homePageEmail = document.querySelector(".email-head")! as HTMLInputElement;
+    headerEmail.innerText = `Welcome, ${homePageEmail.innerText}`;
+    }
+    catch(e) {
+        console.log(e);    
+    }
+
+    let dtsBox = document.querySelector(".details-box")! as HTMLBodyElement;
+    let span = document.createElement("span");
+    span.innerText = `• User jashjeet99 logged in.`;   //when user entered the page it shows in activity section..
+    span.classList.add("details");
+    dtsBox.append(span);
+
+    let loader = document.querySelector(".loader-container")! as HTMLBodyElement;
+    setTimeout((): void => {
+        loader.style.display = "none";
+    }, 1000);
+
+    return; 
+}) ();
+
+let logoutbtn = document.querySelector(".button-logout")! as HTMLBodyElement;
+logoutbtn.addEventListener("click", (): void => {
+    window.location.replace("index.html");    // logout funct....
+    return;
+});
+
+let homePageName = document.querySelector(".name-head")! as HTMLBodyElement;
+let homePageEmail = document.querySelector(".email-head")! as HTMLBodyElement;
+let formPageName = document.querySelector(".form-name")! as HTMLInputElement;
+let formPageEmail = document.querySelector(".form-email")! as HTMLInputElement;
+let formPage = document.querySelector(".edit_form-container")! as HTMLBodyElement;
+let editProfilebtn = document.querySelector(".home-btn")! as HTMLBodyElement;
+let updateProfilebtn = document.querySelector(".form-btn")! as HTMLBodyElement;
+let homePic = document.querySelector(".profile-logo")! as HTMLBodyElement;
+let cancel = document.querySelector(".notUpdate")! as HTMLBodyElement;
+
+editProfilebtn.addEventListener('click', (): void => {
+    formPage.style.display = "flex";
+    formPageName.placeholder=homePageName.innerText;
+    formPageEmail.placeholder=homePageEmail.innerText; // When user click edit profile
+    return;
+});
+
+cancel.addEventListener('click', (): void => {
+    formPage.style.display = "none";
+    return;
+});
+
+updateProfilebtn.addEventListener('click', (): void => {
+    if(formPageName.value ==="" && formPageEmail.value ==="") {
+        homePageName.innerText = formPageName.placeholder;
+        homePageEmail.innerText = formPageEmail.placeholder;  // When user click update profile
+    }
+    if(formPageName.value !== "" && formPageEmail.value !== "") {
+        homePageName.innerText = formPageName.value;
+        homePageEmail.innerText = formPageEmail.value;
+    }
+    if(formPageName.value === "" && formPageEmail.value !== "") {
+        homePageName.innerText = formPageName.placeholder;
+        homePageEmail.innerText = formPageEmail.value;
+    }
+    if(formPageEmail.value === "" && formPageName.value !== "") {
+        homePageEmail.innerText = formPageEmail.placeholder;
+        homePageName.innerText = formPageName.value;
+    }
+
+    formPageName.value = "";
+    formPageEmail.value = "";
+
+    let headerEmail = document.querySelector(".heading-text")! as HTMLBodyElement;
+    headerEmail.innerText = `Welcome, ${homePageEmail.innerText}`;
+
+    let dtsBox = document.querySelector(".details-box")! as HTMLBodyElement;
+    let span = document.createElement("span");
+    span.innerText = `• Profile Updated.`;
+    span.classList.add("details");
+    dtsBox.append(span);
+    formPage.style.display = "none";
+    updateLoader();
+    return;
+});
+
+function updateLoader(): void {
+    let loader = document.querySelector(".loader-container")! as HTMLBodyElement;
+    loader.style.display = "flex";
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 1000);
+    return;
+}
+
+let photo = document.getElementById("edit-photo")! as HTMLInputElement;
+let phtoDisplay = document.querySelector(".edit-pic")! as HTMLBodyElement;
+
+photo.addEventListener('change', (): void => {
+    const file = photo.files?.[0];
+    if(file) {
+        phtoDisplay.style.backgroundImage = `url(${URL.createObjectURL(file)})`;
+        homePic.style.backgroundImage = `url(${URL.createObjectURL(file)})`;
+    }
+    return;
+});
+
+// Done and Dusted
