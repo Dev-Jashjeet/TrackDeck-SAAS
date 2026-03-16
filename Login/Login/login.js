@@ -39,5 +39,7 @@ button.addEventListener("click", (e) => {
         alert("Please fill the details");
     }
 });
-
+export {};
 //Done and Dusted
+// Tested :)
+//# sourceMappingURL=login.js.map
