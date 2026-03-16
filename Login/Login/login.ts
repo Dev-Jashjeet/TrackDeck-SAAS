@@ -10,7 +10,7 @@ interface userDataType {
   password: string;
 }
 
-let userData: userDataType[] = [ 
+let userData: Required<userDataType[]> = [ 
   { userID: "sxz123@in", password: "123" },
   { userID: "hsj123@in", password: "352" },
   { userID: "pop12@gin", password: "837" },
