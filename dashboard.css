@@ -10,12 +10,35 @@ body {
     background-color: #F4F6F9;
 }
 
+.sidebar-container {
+    height: 100vh;
+    background-color: #3a4b5c;
+    position: fixed;
+    z-index: 100;
+    transition: all 0.4s ease;
+}
+
 .header {
     height: 120px;
     width: 100%;
     background-color: #E9EEF5;
     display: flex;
     justify-content: center;
+}
+
+.sidebar {
+    font-weight: 800;
+    font-size: 35px;
+    height: fit-content;
+    position: fixed;
+    left: 25px;
+    top: 10px;
+    color: #1a2530;
+    z-index: 200;
+}
+
+.sidebar:hover {
+    cursor: pointer;
 }
 
 .header-innercnt {
