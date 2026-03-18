@@ -32,6 +32,24 @@ let editProfilebtn = document.querySelector(".home-btn");
 let updateProfilebtn = document.querySelector(".form-btn");
 let homePic = document.querySelector(".profile-logo");
 let cancel = document.querySelector(".notUpdate");
+let sideBarBtn = document.querySelector(".sidebar");
+let sideBarCont = document.querySelector(".sidebar-container");
+// Side-bar Button Action area
+sideBarBtn.addEventListener('mouseenter', () => {
+    sideBarBtn.style.color = "#E0E6ED";
+    sideBarCont.style.width = "80px";
+    return;
+});
+sideBarCont.addEventListener('mouseenter', () => {
+    sideBarBtn.style.color = "#E0E6ED";
+    sideBarCont.style.width = "80px";
+    return;
+});
+sideBarCont.addEventListener('mouseleave', () => {
+    sideBarBtn.style.color = "#1a2530";
+    sideBarCont.style.width = "0px";
+    return;
+});
 editProfilebtn.addEventListener('click', () => {
     formPage.style.display = "flex";
     formPageName.placeholder = homePageName.innerText;
