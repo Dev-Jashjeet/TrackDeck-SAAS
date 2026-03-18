@@ -37,6 +37,25 @@ let editProfilebtn = document.querySelector(".home-btn")! as HTMLBodyElement;
 let updateProfilebtn = document.querySelector(".form-btn")! as HTMLBodyElement;
 let homePic = document.querySelector(".profile-logo")! as HTMLBodyElement;
 let cancel = document.querySelector(".notUpdate")! as HTMLBodyElement;
+let sideBarBtn = document.querySelector(".sidebar")! as HTMLBodyElement;
+let sideBarCont = document.querySelector(".sidebar-container")! as HTMLBodyElement;
+
+// Side-bar Button Action area
+sideBarBtn.addEventListener('mouseenter', ():void => {
+    sideBarBtn.style.color = "#E0E6ED";
+    sideBarCont.style.width = "80px";
+    return;
+});
+sideBarCont.addEventListener('mouseenter', ():void => {
+    sideBarBtn.style.color = "#E0E6ED";
+    sideBarCont.style.width = "80px";
+    return;
+});
+sideBarCont.addEventListener('mouseleave', (): void => {
+    sideBarBtn.style.color = "#1a2530";
+    sideBarCont.style.width = "0px";
+    return;
+});
 
 editProfilebtn.addEventListener('click', (): void => {
     formPage.style.display = "flex";
