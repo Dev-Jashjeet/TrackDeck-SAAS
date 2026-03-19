@@ -34,20 +34,43 @@ let homePic = document.querySelector(".profile-logo");
 let cancel = document.querySelector(".notUpdate");
 let sideBarBtn = document.querySelector(".sidebar");
 let sideBarCont = document.querySelector(".sidebar-container");
+let isOpen = false;
 // Side-bar Button Action area
 sideBarBtn.addEventListener('mouseenter', () => {
     sideBarBtn.style.color = "#E0E6ED";
-    sideBarCont.style.width = "80px";
+    if (sideBarCont.style.width !== "270px") {
+        sideBarCont.style.width = "80px";
+    };
     return;
 });
 sideBarCont.addEventListener('mouseenter', () => {
     sideBarBtn.style.color = "#E0E6ED";
-    sideBarCont.style.width = "80px";
+    if (sideBarCont.style.width !== "270px") {
+        sideBarCont.style.width = "80px";
+    };
     return;
 });
 sideBarCont.addEventListener('mouseleave', () => {
-    sideBarBtn.style.color = "#1a2530";
-    sideBarCont.style.width = "0px";
+    if (sideBarCont.style.width === "80px") {
+        sideBarBtn.style.color = "#1a2530";
+        sideBarCont.style.width = "0px";
+    };
+    return;
+});
+// Side-bar Button click
+sideBarBtn.addEventListener('click', () => {
+    if (isOpen === true) {
+        sideBarBtn.style.color = "#1a2530";
+        sideBarCont.style.width = "0px";
+        document.body.style.overflow = "auto";
+        isOpen = false;
+    }
+    else {
+        sideBarBtn.style.color = "#E0E6ED";
+        sideBarCont.style.width = "270px";
+        document.body.style.overflow = "hidden";
+        isOpen = true;
+    }
     return;
 });
 editProfilebtn.addEventListener('click', () => {
