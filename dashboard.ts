@@ -39,20 +39,18 @@ let homePic = document.querySelector(".profile-logo")! as HTMLBodyElement;
 let cancel = document.querySelector(".notUpdate")! as HTMLBodyElement;
 let sideBarBtn = document.querySelector(".sidebar")! as HTMLBodyElement;
 let sideBarCont = document.querySelector(".sidebar-container")! as HTMLBodyElement;
-let isOPen: boolean = false;
+let sideCancel = document.querySelector(".cancel-logo")! as HTMLBodyElement;
 
-// Side-bar Button Action area
+// Side-bar Button Hover
 sideBarBtn.addEventListener('mouseenter', ():void => {
     sideBarBtn.style.color = "#E0E6ED";
-    if (sideBarCont.style.width !== "270px") {
-        sideBarCont.style.width = "80px";
-    };
+        sideBarCont.style.width = "78px";
     return;
 });
 sideBarCont.addEventListener('mouseenter', ():void => {
     sideBarBtn.style.color = "#E0E6ED";
     if (sideBarCont.style.width !== "270px") {
-        sideBarCont.style.width = "80px";
+        sideBarCont.style.width = "78px";
     };
     return;
 });
@@ -66,19 +64,24 @@ sideBarCont.addEventListener('mouseleave', (): void => {
 
 // Side-bar Button click
 sideBarBtn.addEventListener('click', (): void => {
-    if(isOpen === true) {
-        sideBarBtn.style.color = "#1a2530";
-        sideBarCont.style.width = "0px";
-        document.body.style.overflow = "auto";
-        isOpen = false;
-    } else {
-        sideBarBtn.style.color = "#E0E6ED";
-        sideBarCont.style.width = "270px";
-        document.body.style.overflow = "hidden";
-        isOpen = true;
-    }   
+    sideBarBtn.style.color = "#E0E6ED";
+    sideBarCont.style.width = "270px";
+    document.body.style.overflow = "hidden";
+    sideBarBtn.style.display = "none";
     return;
 });
+sideCancel.addEventListener('click', (): void => {
+    sideBarCont.style.width = "0px";
+    document.body.style.overflow = "auto";
+    setTimeout((): void => {
+        sideBarBtn.style.color = "#1a2530";
+        sideBarBtn.style.display = "flex";
+        return;
+    }, 300);
+    return;
+});
+
+// Side-Bar button function closing
 
 editProfilebtn.addEventListener('click', (): void => {
     formPage.style.display = "flex";
