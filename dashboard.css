@@ -10,12 +10,78 @@ body {
     background-color: #F4F6F9;
 }
 
-.sidebar-container {
+.sidebar-container { /* Main container of sidebar */
     height: 100vh;
+    width: 0px;
     background-color: #3a4b5c;
     position: fixed;
     z-index: 100;
     transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.sidebar-header {
+    height: 80px;
+    width: 265px;
+    /* background: yellow; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cancel-logo {
+    font-size: 40px;
+    color: #E0E6ED;
+    padding-left: 20px;
+}
+.cancel-logo:hover {
+    cursor: pointer;
+    color: #F8FAFC;
+}
+
+.sidebar-body-cont {
+    height: 100vh;
+    width: 265px;
+    /* background-color: red; */
+}
+
+.body-seperate {
+    height: fit-content;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+}
+
+.left-cont-sec {
+    width: 186px;
+    height: fit-content;
+    /* background-color: #1a2530; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 21px;
+    color: #F8FAFC;
+    gap: 48px;
+    transition: all 0.3s ease;
+    left: 10px;
+    font-weight: 500;
+}
+
+.left-cont {
+    height: fit-content;
+    width: 80px;
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    gap: 50px;
+    margin-top: 20px;
+    color: #ffff;
+    transition: all 0.3s ease;
 }
 
 .header {
@@ -24,6 +90,26 @@ body {
     background-color: #E9EEF5;
     display: flex;
     justify-content: center;
+}
+
+.sidebar {
+    font-weight: 800;
+    font-size: 35px;
+    height: fit-content;
+    position: fixed;
+    left: 25px;
+    top: 10px;
+    color: #1a2530;
+    z-index: 200;
+}
+
+.sidebar:hover {
+    cursor: pointer;
+}
+
+#sidebar-prop:hover {
+    cursor: pointer;
+    color: #ffff;
 }
 
 .sidebar {
