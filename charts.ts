@@ -137,8 +137,8 @@ revChartBtns[0]!.addEventListener('click', (): void => {
 
 //Monthly chart update
 let monthly:chartI = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-              data: [200,300,450,400,600,1000,2000,1560,4000,3200,7800,7600],
+  labels: ["Jan", "Feb", "Mar"],
+              data: [3200,7800,7600],
 };
 
 revChartBtns[1]!.addEventListener('click', (): void => {
@@ -154,7 +154,7 @@ revChartBtns[1]!.addEventListener('click', (): void => {
 
 //Yearly chart update
 let yearly:chartI = {
-              labels: ["2026", "2025", "2024", "2023", "2022"],
+              labels: ["2022", "2023", "2024", "2025", "2026"],
               data: [400,3500,6600,7800,8160],
 }
 
