@@ -97,8 +97,8 @@ revChartBtns[0].addEventListener('click', () => {
 });
 //Monthly chart update
 let monthly = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    data: [200, 300, 450, 400, 600, 1000, 2000, 1560, 4000, 3200, 7800, 7600],
+    labels: ["Jan", "Feb", "Mar"],
+    data: [3200, 7800, 7600],
 };
 revChartBtns[1].addEventListener('click', () => {
     revChartBtns[1].classList.add("buttonColor");
@@ -111,7 +111,7 @@ revChartBtns[1].addEventListener('click', () => {
 });
 //Yearly chart update
 let yearly = {
-    labels: ["2026", "2025", "2024", "2023", "2022"],
+    labels: ["2022", "2023", "2024", "2025", "2026"],
     data: [400, 3500, 6600, 7800, 8160],
 };
 revChartBtns[2].addEventListener('click', () => {
@@ -133,5 +133,5 @@ revChartBtns[2].addEventListener('click', () => {
     revChartBtns[2].classList.remove("buttonColor");
     return;
 })();
-
+export {};
 // Done and Dusted
