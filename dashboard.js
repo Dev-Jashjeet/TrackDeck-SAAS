@@ -50,7 +50,7 @@ sideBarCont.addEventListener('mouseenter', () => {
     return;
 });
 sideBarCont.addEventListener('mouseleave', () => {
-    if (sideBarCont.style.width === "80px") {
+    if (sideBarCont.style.width === "78px") {
         sideBarBtn.style.color = "#1a2530";
         sideBarCont.style.width = "0px";
     }
