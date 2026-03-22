@@ -35,6 +35,7 @@ let cancel = document.querySelector(".notUpdate");
 let sideBarBtn = document.querySelector(".sidebar");
 let sideBarCont = document.querySelector(".sidebar-container");
 let sideCancel = document.querySelector(".cancel-logo");
+let addContainer = document.querySelector(".sidebar-add-cont");
 // Side-bar Button Hover
 sideBarBtn.addEventListener('mouseenter', () => {
     sideBarBtn.style.color = "#E0E6ED";
@@ -62,6 +63,7 @@ sideBarBtn.addEventListener('click', () => {
     sideBarBtn.style.color = "#E0E6ED";
     sideBarCont.style.width = "270px";
     document.body.style.overflow = "hidden";
+    addContainer.style.display = "flex";
     sideBarBtn.style.display = "none";
     return;
 });
@@ -69,6 +71,7 @@ sideCancel.addEventListener('click', () => {
     sideBarCont.style.width = "0px";
     document.body.style.overflow = "auto";
     setTimeout(() => {
+        addContainer.style.display = "none";
         sideBarBtn.style.color = "#1a2530";
         sideBarBtn.style.display = "flex";
         return;
