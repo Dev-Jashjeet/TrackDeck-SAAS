@@ -40,6 +40,7 @@ let cancel = document.querySelector(".notUpdate")! as HTMLBodyElement;
 let sideBarBtn = document.querySelector(".sidebar")! as HTMLBodyElement;
 let sideBarCont = document.querySelector(".sidebar-container")! as HTMLBodyElement;
 let sideCancel = document.querySelector(".cancel-logo")! as HTMLBodyElement;
+let addContainer = document.querySelector(".sidebar-add-cont")! as HTMLBodyElement;
 
 // Side-bar Button Hover
 sideBarBtn.addEventListener('mouseenter', ():void => {
@@ -67,6 +68,7 @@ sideBarBtn.addEventListener('click', (): void => {
     sideBarBtn.style.color = "#E0E6ED";
     sideBarCont.style.width = "270px";
     document.body.style.overflow = "hidden";
+    addContainer.style.display = "flex";
     sideBarBtn.style.display = "none";
     return;
 });
@@ -74,6 +76,7 @@ sideCancel.addEventListener('click', (): void => {
     sideBarCont.style.width = "0px";
     document.body.style.overflow = "auto";
     setTimeout((): void => {
+        addContainer.style.display = "none";
         sideBarBtn.style.color = "#1a2530";
         sideBarBtn.style.display = "flex";
         return;
