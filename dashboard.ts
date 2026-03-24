@@ -41,6 +41,7 @@ let sideBarBtn = document.querySelector(".sidebar")! as HTMLBodyElement;
 let sideBarCont = document.querySelector(".sidebar-container")! as HTMLBodyElement;
 let sideCancel = document.querySelector(".cancel-logo")! as HTMLBodyElement;
 let addContainer = document.querySelector(".sidebar-add-cont")! as HTMLBodyElement;
+let sideBarClick = document.querySelectorAll(".sidebar-home")! ; // SideBar Home logo and button access
 
 // Side-bar Button Hover
 sideBarBtn.addEventListener('mouseenter', ():void => {
@@ -150,6 +151,16 @@ photo.addEventListener('change', (): void => {
         phtoDisplay.style.backgroundImage = `url(${URL.createObjectURL(file)})`;
         homePic.style.backgroundImage = `url(${URL.createObjectURL(file)})`;
     }
+    return;
+});
+
+// SideBar Buttons Section Starts
+sideBarClick[0]!.addEventListener('click', (): void => {
+    window.location.assign("dashboard.html");
+    return;
+});
+sideBarClick[1]!.addEventListener('click', (): void => {
+    window.location.assign("dashboard.html");
     return;
 });
 
