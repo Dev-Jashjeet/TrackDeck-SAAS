@@ -36,6 +36,7 @@ let sideBarBtn = document.querySelector(".sidebar");
 let sideBarCont = document.querySelector(".sidebar-container");
 let sideCancel = document.querySelector(".cancel-logo");
 let addContainer = document.querySelector(".sidebar-add-cont");
+let sideBarClick = document.querySelectorAll(".sidebar-home"); // SideBar Home logo and button access
 // Side-bar Button Hover
 sideBarBtn.addEventListener('mouseenter', () => {
     sideBarBtn.style.color = "#E0E6ED";
@@ -135,6 +136,15 @@ photo.addEventListener('change', () => {
         phtoDisplay.style.backgroundImage = `url(${URL.createObjectURL(file)})`;
         homePic.style.backgroundImage = `url(${URL.createObjectURL(file)})`;
     }
+    return;
+});
+// SideBar Buttons Section Starts
+sideBarClick[0].addEventListener('click', () => {
+    window.location.assign("dashboard.html");
+    return;
+});
+sideBarClick[1].addEventListener('click', () => {
+    window.location.assign("dashboard.html");
     return;
 });
 export {};
