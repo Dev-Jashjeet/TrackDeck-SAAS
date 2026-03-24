@@ -165,7 +165,7 @@ body {
     cursor: pointer;
 }
 
-#sidebar-prop:hover {
+.sidebar-prop:hover {
     cursor: pointer;
     color: #ffff;
 }
