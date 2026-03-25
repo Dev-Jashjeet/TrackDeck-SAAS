@@ -41,7 +41,10 @@ let sideBarBtn = document.querySelector(".sidebar")! as HTMLBodyElement;
 let sideBarCont = document.querySelector(".sidebar-container")! as HTMLBodyElement;
 let sideCancel = document.querySelector(".cancel-logo")! as HTMLBodyElement;
 let addContainer = document.querySelector(".sidebar-add-cont")! as HTMLBodyElement;
+let bodyContainer = document.querySelector(".body-container")! as HTMLBodyElement;
 let sideBarClick = document.querySelectorAll(".sidebar-home")! ; // SideBar Home logo and button access
+let sideBarMode = document.querySelectorAll(".sidebar-mode")! ;
+let mode: string = "light";
 
 // Side-bar Button Hover
 sideBarBtn.addEventListener('mouseenter', ():void => {
@@ -162,6 +165,29 @@ sideBarClick[0]!.addEventListener('click', (): void => {
 sideBarClick[1]!.addEventListener('click', (): void => {
     window.location.assign("dashboard.html");
     return;
+});
+
+sideBarMode[0]!.addEventListener('click', (): void => {
+    if(mode === "light") {
+        bodyContainer.style.backgroundColor = "black";
+        mode = "dark";
+    }
+    else {
+        bodyContainer.style.backgroundColor = "#F4F6F9";
+        mode = "light";
+    }
+    return ;
+});
+sideBarMode[1]!.addEventListener('click', (): void => {
+    if(mode === "light") {
+        bodyContainer.style.backgroundColor = "black";
+        mode = "dark";
+    }
+    else {
+        bodyContainer.style.backgroundColor = "#F4F6F9";
+        mode = "light";
+    }
+    return ;
 });
 
 // Done and Dusted
