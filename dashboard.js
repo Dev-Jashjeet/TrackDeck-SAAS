@@ -36,7 +36,10 @@ let sideBarBtn = document.querySelector(".sidebar");
 let sideBarCont = document.querySelector(".sidebar-container");
 let sideCancel = document.querySelector(".cancel-logo");
 let addContainer = document.querySelector(".sidebar-add-cont");
+let bodyContainer = document.querySelector(".body-container");
 let sideBarClick = document.querySelectorAll(".sidebar-home"); // SideBar Home logo and button access
+let sideBarMode = document.querySelectorAll(".sidebar-mode");
+let mode = "light";
 // Side-bar Button Hover
 sideBarBtn.addEventListener('mouseenter', () => {
     sideBarBtn.style.color = "#E0E6ED";
@@ -145,6 +148,28 @@ sideBarClick[0].addEventListener('click', () => {
 });
 sideBarClick[1].addEventListener('click', () => {
     window.location.assign("dashboard.html");
+    return;
+});
+sideBarMode[0].addEventListener('click', () => {
+    if (mode === "light") {
+        bodyContainer.style.backgroundColor = "black";
+        mode = "dark";
+    }
+    else {
+        bodyContainer.style.backgroundColor = "#F4F6F9";
+        mode = "light";
+    }
+    return;
+});
+sideBarMode[1].addEventListener('click', () => {
+    if (mode === "light") {
+        bodyContainer.style.backgroundColor = "black";
+        mode = "dark";
+    }
+    else {
+        bodyContainer.style.backgroundColor = "#F4F6F9";
+        mode = "light";
+    }
     return;
 });
 export {};
