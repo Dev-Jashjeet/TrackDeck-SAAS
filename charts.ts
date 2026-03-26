@@ -119,8 +119,8 @@ interface chartI {
 }
 
 // weekly chart update
-let weekly:chartI = {labels: ["Mon","Tue","Wed],
-              data: [1300,1430,1200],
+let weekly:chartI = {labels: ["Mon","Tue","Wed","Thu"],
+              data: [1300,1430,1200,1294],
 
 };
 
@@ -171,8 +171,8 @@ revChartBtns[2]!.addEventListener('click', (): void => {
 
 // When page loads charts refresh and sets to weekly
 (function loadChart(): void {
-  v.data.labels = ["Mon","Tue","Wed];
-  v.data.datasets[0].data = [1300,1430,1200];
+  v.data.labels = ["Mon","Tue","Wed","Thu"];
+  v.data.datasets[0].data = [1300,1430,1200,1294];
   v.update();
 
   revChartBtns[0]!.classList.add("buttonColor");
