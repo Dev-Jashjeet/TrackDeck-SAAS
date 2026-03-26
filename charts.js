@@ -83,8 +83,8 @@ new Chart(taskCtx, {
 /// revenue chart buttons
 let revChartBtns = document.querySelectorAll(".pd");
 // weekly chart update
-let weekly = { labels: ["Mon","Tue","Wed"],
-    data: [1300,1430,1200],
+let weekly = { labels: ["Mon","Tue","Wed","Thu"],
+    data: [1300,1430,1200,1294],
 };
 revChartBtns[0].addEventListener('click', () => {
     revChartBtns[0].classList.add("buttonColor");
@@ -125,8 +125,8 @@ revChartBtns[2].addEventListener('click', () => {
 });
 // When page loads charts refresh and sets to weekly
 (function loadChart() {
-    v.data.labels = ["Mon","Tue","Wed"];
-    v.data.datasets[0].data = [1300,1430,1200];
+    v.data.labels = ["Mon","Tue","Wed","Thu"];
+    v.data.datasets[0].data = [1300,1430,1200,1294];
     v.update();
     revChartBtns[0].classList.add("buttonColor");
     revChartBtns[1].classList.remove("buttonColor");
