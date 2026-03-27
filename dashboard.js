@@ -36,9 +36,11 @@ let sideBarBtn = document.querySelector(".sidebar");
 let sideBarCont = document.querySelector(".sidebar-container");
 let sideCancel = document.querySelector(".cancel-logo");
 let addContainer = document.querySelector(".sidebar-add-cont");
+let addSecbg = document.querySelector(".add-sec");
 let bodyContainer = document.querySelector(".body-container");
+let RevChartBg = document.querySelectorAll(".bgColor");
 let sideBarClick = document.querySelectorAll(".sidebar-home"); // SideBar Home logo and button access
-let sideBarMode = document.querySelectorAll(".sidebar-mode");
+let sideBarMode = document.querySelectorAll(".sidebar-mode"); // SideBar Theme Mode button access
 let mode = "light";
 // Side-bar Button Hover
 sideBarBtn.addEventListener('mouseenter', () => {
@@ -163,14 +165,25 @@ sideBarMode[0].addEventListener('click', () => {
 });
 sideBarMode[1].addEventListener('click', () => {
     if (mode === "light") {
-        bodyContainer.style.backgroundColor = "black";
+        bodyContainer.style.backgroundColor = "#000000de";
+        sideBarCont.style.backgroundColor = "black";
+        addSecbg.style.backgroundColor = "#041424";
+        for (let i = 0; i < RevChartBg.length; i++) {
+            RevChartBg[i].style.backgroundColor = "#000000";
+        }
         mode = "dark";
     }
     else {
         bodyContainer.style.backgroundColor = "#F4F6F9";
+        sideBarCont.style.backgroundColor = "#1c1c23";
+        addSecbg.style.backgroundColor = "#333436";
+        for (let i = 0; i < RevChartBg.length; i++) {
+            RevChartBg[i].style.backgroundColor = "#F8FAFC";
+        }
         mode = "light";
     }
     return;
 });
+console.log(RevChartBg);
 export {};
 // Done and Dusted
