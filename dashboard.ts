@@ -3,6 +3,7 @@
     let headerEmail = document.querySelector(".heading-text")! as HTMLBodyElement;
     let homePageEmail = document.querySelector(".email-head")! as HTMLInputElement;
     headerEmail.innerText = `Welcome, ${homePageEmail.innerText}`;
+    
     }
     catch(e) {
         console.log(e);    
@@ -41,9 +42,12 @@ let sideBarBtn = document.querySelector(".sidebar")! as HTMLBodyElement;
 let sideBarCont = document.querySelector(".sidebar-container")! as HTMLBodyElement;
 let sideCancel = document.querySelector(".cancel-logo")! as HTMLBodyElement;
 let addContainer = document.querySelector(".sidebar-add-cont")! as HTMLBodyElement;
+let addSecbg = document.querySelector(".add-sec")! as HTMLDivElement;
 let bodyContainer = document.querySelector(".body-container")! as HTMLBodyElement;
+let RevChartBg = document.querySelectorAll(".bgColor")! ;
 let sideBarClick = document.querySelectorAll(".sidebar-home")! ; // SideBar Home logo and button access
-let sideBarMode = document.querySelectorAll(".sidebar-mode")! ;
+let sideBarMode = document.querySelectorAll(".sidebar-mode")! ;  // SideBar Theme Mode button access
+
 let mode: string = "light";
 
 // Side-bar Button Hover
@@ -159,7 +163,7 @@ photo.addEventListener('change', (): void => {
 
 // SideBar Buttons Section Starts
 sideBarClick[0]!.addEventListener('click', (): void => {
-    window.location.assign("dashboard.html");
+        window.location.assign("dashboard.html");
     return;
 });
 sideBarClick[1]!.addEventListener('click', (): void => {
@@ -180,14 +184,28 @@ sideBarMode[0]!.addEventListener('click', (): void => {
 });
 sideBarMode[1]!.addEventListener('click', (): void => {
     if(mode === "light") {
-        bodyContainer.style.backgroundColor = "black";
+        bodyContainer.style.backgroundColor = "#000000de";
+        sideBarCont.style.backgroundColor = "black";
+        addSecbg.style.backgroundColor = "#041424";
+        for(let i=0; i<RevChartBg.length; i++) {
+            (RevChartBg[i] as HTMLElement)!.style.backgroundColor = "#000000";
+        }
         mode = "dark";
     }
     else {
         bodyContainer.style.backgroundColor = "#F4F6F9";
+        sideBarCont.style.backgroundColor = "#1c1c23";
+        addSecbg.style.backgroundColor = "#333436";
+        for(let i=0; i<RevChartBg.length; i++) {
+            (RevChartBg[i] as HTMLElement)!.style.backgroundColor = "#F8FAFC";
+        }
         mode = "light";
     }
     return ;
 });
+
+console.log(RevChartBg);
+
+
 
 // Done and Dusted
