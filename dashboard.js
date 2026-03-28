@@ -38,7 +38,9 @@ let sideCancel = document.querySelector(".cancel-logo");
 let addContainer = document.querySelector(".sidebar-add-cont");
 let addSecbg = document.querySelector(".add-sec");
 let bodyContainer = document.querySelector(".body-container");
-let RevChartBg = document.querySelectorAll(".bgColor");
+let ChartsBg = document.querySelectorAll(".bgColor");
+let headingDivBg = document.querySelectorAll(".hDBg");
+let headerBg = document.querySelectorAll(".hBg");
 let sideBarClick = document.querySelectorAll(".sidebar-home"); // SideBar Home logo and button access
 let sideBarMode = document.querySelectorAll(".sidebar-mode"); // SideBar Theme Mode button access
 let mode = "light";
@@ -168,8 +170,15 @@ sideBarMode[1].addEventListener('click', () => {
         bodyContainer.style.backgroundColor = "#000000de";
         sideBarCont.style.backgroundColor = "black";
         addSecbg.style.backgroundColor = "#041424";
-        for (let i = 0; i < RevChartBg.length; i++) {
-            RevChartBg[i].style.backgroundColor = "#000000";
+        for (let i = 0; i <= headerBg.length - 2; i++) {
+            headerBg[i].style.backgroundColor = "#393c40";
+            headerBg[i + 1].style.color = "#eaedf0";
+        }
+        for (let i = 0; i < ChartsBg.length; i++) {
+            ChartsBg[i].style.backgroundColor = "#000000";
+        }
+        for (let i = 0; i < headingDivBg.length; i++) {
+            headingDivBg[i].classList.add("modeWhite");
         }
         mode = "dark";
     }
@@ -177,13 +186,17 @@ sideBarMode[1].addEventListener('click', () => {
         bodyContainer.style.backgroundColor = "#F4F6F9";
         sideBarCont.style.backgroundColor = "#1c1c23";
         addSecbg.style.backgroundColor = "#333436";
-        for (let i = 0; i < RevChartBg.length; i++) {
-            RevChartBg[i].style.backgroundColor = "#F8FAFC";
+        for (let i = 0; i <= headerBg.length - 2; i++) {
+            headerBg[i].style.backgroundColor = "#E9EEF5";
+            headerBg[i + 1].style.color = "#2C3E50";
+        }
+        for (let i = 0; i < ChartsBg.length; i++) {
+            ChartsBg[i].style.backgroundColor = "#F8FAFC";
+        }
+        for (let i = 0; i < headingDivBg.length; i++) {
+            headingDivBg[i].classList.remove("modeWhite");
         }
         mode = "light";
     }
     return;
 });
-console.log(RevChartBg);
-export {};
-// Done and Dusted
