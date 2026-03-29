@@ -41,6 +41,7 @@ let bodyContainer = document.querySelector(".body-container");
 let ChartsBg = document.querySelectorAll(".bgColor");
 let headingDivBg = document.querySelectorAll(".hDBg");
 let headerBg = document.querySelectorAll(".hBg");
+let sideBarCol = document.querySelector(".sideBLogo");
 let sideBarClick = document.querySelectorAll(".sidebar-home"); // SideBar Home logo and button access
 let sideBarMode = document.querySelectorAll(".sidebar-mode"); // SideBar Theme Mode button access
 let mode = "light";
@@ -168,6 +169,7 @@ sideBarMode[0].addEventListener('click', () => {
 sideBarMode[1].addEventListener('click', () => {
     if (mode === "light") {
         bodyContainer.style.backgroundColor = "#000000de";
+        sideBarCol.classList.add("sideBg");
         sideBarCont.style.backgroundColor = "black";
         addSecbg.style.backgroundColor = "#041424";
         for (let i = 0; i <= headerBg.length - 2; i++) {
@@ -184,6 +186,7 @@ sideBarMode[1].addEventListener('click', () => {
     }
     else {
         bodyContainer.style.backgroundColor = "#F4F6F9";
+        sideBarCol.classList.remove("sideBg");
         sideBarCont.style.backgroundColor = "#1c1c23";
         addSecbg.style.backgroundColor = "#333436";
         for (let i = 0; i <= headerBg.length - 2; i++) {
