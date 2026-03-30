@@ -176,11 +176,37 @@ sideBarClick[1]!.addEventListener('click', (): void => {
 
 sideBarMode[0]!.addEventListener('click', (): void => {
     if(mode === "light") {
-        bodyContainer.style.backgroundColor = "black";
+        bodyContainer.style.backgroundColor = "#000000de";
+        sideBarCol.classList.add("sideBg");
+        sideBarCont.style.backgroundColor = "black";
+        addSecbg.style.backgroundColor = "#041424";
+        for(let i=0; i<=headerBg.length-2; i++) {
+            (headerBg[i] as HTMLBodyElement)!.style.backgroundColor = "#393c40";
+            (headerBg[i+1] as HTMLHeadingElement)!.style.color = "#eaedf0";
+        }
+        for(let i=0; i<ChartsBg.length; i++) {
+            (ChartsBg[i] as HTMLElement)!.style.backgroundColor = "#000000";
+        }
+        for(let i=0; i<headingDivBg.length; i++) {
+            (headingDivBg[i] as HTMLElement)!.classList.add("modeWhite");
+        }
         mode = "dark";
     }
     else {
         bodyContainer.style.backgroundColor = "#F4F6F9";
+        sideBarCol.classList.remove("sideBg");
+        sideBarCont.style.backgroundColor = "#1c1c23";
+        addSecbg.style.backgroundColor = "#333436";
+        for (let i = 0; i <= headerBg.length - 2; i++) {
+            (headerBg[i] as HTMLBodyElement)!.style.backgroundColor = "#E9EEF5";
+            (headerBg[i + 1] as HTMLHeadingElement)!.style.color = "#2C3E50";
+        }
+        for (let i = 0; i < ChartsBg.length; i++) {
+            (ChartsBg[i] as HTMLElement)!.style.backgroundColor = "#F8FAFC";
+        }
+        for (let i = 0; i < headingDivBg.length; i++) {
+            (headingDivBg[i] as HTMLElement)!.classList.remove("modeWhite");
+        }
         mode = "light";
     }
     return ;
@@ -208,14 +234,14 @@ sideBarMode[1]!.addEventListener('click', (): void => {
         sideBarCol.classList.remove("sideBg");
         sideBarCont.style.backgroundColor = "#1c1c23";
         addSecbg.style.backgroundColor = "#333436";
-        for(let i=0; i<=headerBg.length-2; i++) {
+        for (let i = 0; i <= headerBg.length - 2; i++) {
             (headerBg[i] as HTMLBodyElement)!.style.backgroundColor = "#E9EEF5";
-            (headerBg[i+1] as HTMLHeadingElement)!.style.color = "#2C3E50";
+            (headerBg[i + 1] as HTMLHeadingElement)!.style.color = "#2C3E50";
         }
-        for(let i=0; i<ChartsBg.length; i++) {
+        for (let i = 0; i < ChartsBg.length; i++) {
             (ChartsBg[i] as HTMLElement)!.style.backgroundColor = "#F8FAFC";
         }
-        for(let i=0; i<headingDivBg.length; i++) {
+        for (let i = 0; i < headingDivBg.length; i++) {
             (headingDivBg[i] as HTMLElement)!.classList.remove("modeWhite");
         }
         mode = "light";
