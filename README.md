@@ -3,7 +3,7 @@
 A simple Admin Dashboard project built using **HTML, CSS, TypeScript, and Chart.js**.
 This project was created to practice building a modern dashboard interface and implementing interactive charts using TypeScript.
 
-The dashboard displays analytics data such as **revenue growth, user statistics, notifications, and task completion**. 
+The dashboard displays analytics data such as **revenue growth, user statistics, notifications, and task completion**.
 
 ---
 
