@@ -20,7 +20,7 @@
         loader.style.display = "none";
     }, 1000);
 
-    return; 
+    return;
 }) ();
 
 let logoutbtn = document.querySelector(".button-logout")! as HTMLBodyElement;
@@ -47,6 +47,7 @@ let bodyContainer = document.querySelector(".body-container")! as HTMLBodyElemen
 let ChartsBg = document.querySelectorAll(".bgColor")! ;
 let headingDivBg = document.querySelectorAll(".hDBg")! ;
 let headerBg = document.querySelectorAll(".hBg")! ;
+let loaderBg = document.querySelector(".loader")! as HTMLDivElement;
 let sideBarCol = document.querySelector(".sideBLogo")! as HTMLElement;
 let sideBarClick = document.querySelectorAll(".sidebar-home")! ; // SideBar Home logo and button access
 let sideBarMode = document.querySelectorAll(".sidebar-mode")! ;  // SideBar Theme Mode button access
@@ -177,6 +178,7 @@ sideBarClick[1]!.addEventListener('click', (): void => {
 sideBarMode[0]!.addEventListener('click', (): void => {
     if(mode === "light") {
         bodyContainer.style.backgroundColor = "#000000de";
+        loaderBg.classList.add("lBg");
         sideBarCol.classList.add("sideBg");
         sideBarCont.style.backgroundColor = "black";
         addSecbg.style.backgroundColor = "#041424";
@@ -194,6 +196,7 @@ sideBarMode[0]!.addEventListener('click', (): void => {
     }
     else {
         bodyContainer.style.backgroundColor = "#F4F6F9";
+        loaderBg.classList.remove("lBg");
         sideBarCol.classList.remove("sideBg");
         sideBarCont.style.backgroundColor = "#1c1c23";
         addSecbg.style.backgroundColor = "#333436";
@@ -214,6 +217,7 @@ sideBarMode[0]!.addEventListener('click', (): void => {
 sideBarMode[1]!.addEventListener('click', (): void => {
     if(mode === "light") {
         bodyContainer.style.backgroundColor = "#000000de";
+        loaderBg.classList.add("lBg");
         sideBarCol.classList.add("sideBg");
         sideBarCont.style.backgroundColor = "black";
         addSecbg.style.backgroundColor = "#041424";
@@ -231,6 +235,7 @@ sideBarMode[1]!.addEventListener('click', (): void => {
     }
     else {
         bodyContainer.style.backgroundColor = "#F4F6F9";
+        loaderBg.classList.remove("lBg");
         sideBarCol.classList.remove("sideBg");
         sideBarCont.style.backgroundColor = "#1c1c23";
         addSecbg.style.backgroundColor = "#333436";
@@ -248,4 +253,3 @@ sideBarMode[1]!.addEventListener('click', (): void => {
     }
     return ;
 });
-////---------------------------------
