@@ -133,5 +133,3 @@ revChartBtns[2].addEventListener('click', () => {
     revChartBtns[2].classList.remove("buttonColor");
     return;
 })();
-export {};
-// Done and Dusted
