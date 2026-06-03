@@ -1,197 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dashboard.css" />
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <title>TrackDeck - dashboard</title>
-  </head>
-  <body>
-    <div class="loader-container">
-      <div class="loader"></div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackDeck Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="./dashboard.css" />
+</head>
+<body>
+  <div class="dashboard">
 
-    <div class="edit_form-container">
-      <div class="edit-box">
-        <span class="notUpdate">
-          <i class="fa-solid fa-x"></i>
-        </span>
-        <div class="edit-heading">Update Profile</div>
-        <label for="edit-photo">
-          <div class="edit-pic"></div>
-          <input type="file" id="edit-photo" class="d" accept="image/jpeg, image/png, image/jpg">
-        </label>
-        <div class="edit_name-box">
-          <span class="edit-name-head">Name :</span>
-          <input type="text" class="edit-name form-name" placeholder=""/>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-box">
+        <div class="logo-icon">
+          <i class="fa-solid fa-wallet"></i>
         </div>
-        <div class="edit_name-box">
-          <span class="edit-name-head"> Email :</span>
-          <input type="email" class="edit-email form-email" />
-        </div>
-        <div class="edit-btn edit-form-btn form-btn">Update</div>
-      </div>
-    </div>
-  
-    <div class="sidebar-container">
-      <div class="sidebar-header">
-        <div class="cancel-logo">
-          <i class="fa-solid fa-xmark"></i>
+        <div>
+          <h2>TrackDeck</h2>
+          <p>Finance Manager</p>
         </div>
       </div>
 
-      <div class="sidebar-body-cont">
-        <div class="body-seperate">
-          <div class="left-cont">
-            <i class="fa-solid fa-house sidebar-prop sidebar-home"></i>
-            <i class="fa-solid fa-circle-user sidebar-prop"></i>
-            <i class="fa-solid fa-headset sidebar-prop"></i>
-            <i class="fa-solid fa-message sidebar-prop"></i>
-            <i class="fa-solid fa-circle-half-stroke sidebar-prop sidebar-mode"></i>
-            <i class="fa-solid fa-gear sidebar-prop"></i>
-          </div>
-          <div class="left-cont-sec">
-            <span class="sidebar-prop sidebar-home">Home</span>
-            <span class="sidebar-prop">Account</span>
-            <span class="sidebar-prop">Custome Care</span>
-            <span class="sidebar-prop">Chat with us</span>
-            <span class="sidebar-prop sidebar-mode">System Mode</span>
-            <span class="sidebar-prop">Settings</span>
+      <nav class="nav-links">
+        <a class="nav-item active">
+          <i class="fa-solid fa-table-columns"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a class="nav-item">
+          <i class="fa-regular fa-rectangle-list"></i>
+          <span>Transactions</span>
+        </a>
+
+      </nav>
+
+      <div class="sidebar-profile">
+        <div class="profile-img">
+          <img src=".//assets/null_user.png" alt="photo" class="profile-photo-cls">
+        </div>
+        <div>
+          <h4 class="userprofile">Hello User</h4>
+          <p class="userprofile">User email</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+
+      <!-- Topbar -->
+      <header class="topbar common">
+        <h1 class="userprofile">Welcome, Jashjeet!</h1>
+
+        <div class="topbar-right">
+          <button class="logout-btn">
+            Logout
+          </button>
+
+          <div class="top-avatar">
+            <label for="profile-photo">
+              <input type="file" id="profile-photo" class="file-icon" accept="image/jpeg, image/png, image/jpg">
+              <img src=".//assets/null_user.png" alt="photo" id="profilePic" class="profile-photo-cls">
+            </label>
           </div>
         </div>
+      </header>
 
-        <div class="sidebar-add-cont">
-          <div class="add-sec">
-
-            <div class="add-heading">
-              <span class="logo">
-                <i class="fa-solid fa-crown" id="addcolor"></i>
-              </span>
-              <span class="add-ht">Upgrade Plan</span>
+      <!-- Cards -->
+      <section class="summary-cards common">
+        <div class="card balance-card">
+          <div class="card-top">
+            <div class="card-icon blue">
+              <i class="fa-solid fa-wallet"></i>
             </div>
+            <span>Total Balance</span>
+          </div>
+          <h2 class="BMEScont"></h2>
+        </div>
 
-            <div class="add-body" style="color: #ffb44b;">
-              Go Premium <span class="add-arrow"> <i class="fa-solid fa-right-long"></i></span>
+        <div class="card income-card">
+          <div class="card-top">
+            <div class="card-icon green">
+              <i class="fa-solid fa-arrow-trend-up"></i>
             </div>
-
+            <span>Monthly Income</span>
           </div>
+          <h2 class="BMEScont"></h2>
         </div>
-      </div>
-    </div>
 
-    <div class="header">
-      <div class="sidebar">
-        <i class="fa-solid fa-bars sideBLogo"></i>
-      </div>
-      <div class="header-innercnt">
-        <h1 class="heading-text">Welcome, jashjeet99@gmail.com</h1>
-        <div class="button-logout">Logout</div>
-      </div>
-    </div>
-    <div class="body-container">
-      <div class="upper-container">
-        <div class="boxes bg1">
-          <div class="title">
-            <div class="logo-1">
-              <i class="fa-solid fa-user"></i>
+        <div class="card expense-card">
+          <div class="card-top">
+            <div class="card-icon red">
+              <i class="fa-solid fa-circle-arrow-down"></i>
             </div>
-            <h2>Total Users</h2>
+            <span>Monthly Expenses</span>
           </div>
-          <div class="user-number">1,200</div>
+          <h2 class="BMEScont"></h2>
         </div>
-        <div class="boxes bg2">
-          <div class="title">
-            <div class="logo-1">
-              <i class="fa-solid fa-indian-rupee-sign"></i>
+
+        <div class="card savings-card">
+          <div class="card-top">
+            <div class="card-icon light-green">
+              <i class="fa-solid fa-piggy-bank"></i>
             </div>
-            <h2>Revenue</h2>
+            <span>Monthly Salary</span>
           </div>
-          <div class="user-number">5,40,200</div>
+          <h2 class="BMEScont"></h2>
         </div>
-        <div class="boxes bg3">
-          <div class="title">
-            <div class="logo-1">
-              <i class="fa-solid fa-bell"></i>
-            </div>
-            <h2>Notifications</h2>
-          </div>
-          <div class="user-number">8 <span class="alert">New Alerts</span></div>
-        </div>
-        <div class="boxes bg4">
-          <div class="title">
-            <div class="logo-1">✔</div>
-            <h2>Tasks Completed</h2>
-          </div>
-          <div class="user-number">
-            23 <span class="alert" style="margin-left: 10px">Tasks</span>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      <div class="center-container">
-        <div class="center-box1 bgColor">
-          <div class="center-header">
-            <h3>Revenue Analytics</h3>
-            <div class="outer-box1">
-              <span class="revenue-chartbtn1 pd">Weekly</span>
-              <span class="revenue-chartbtn2 pd">Monthly</span>
-              <span class="revenue-chartbtn3 pd">Yearly</span>
-            </div>
-          </div>
+      <!-- Add Transaction -->
+      <section class="panel add-transaction common">
+        <h2>Add New Transaction</h2>
 
-          <div class="revchart-box">
-            <canvas id="myChart"></canvas>
+        <div class="form-row">
+          <input type="number" placeholder="Amount" id="Amount" class="add-Transaction">
+          
+          <select id="transaction" class="add-Transaction">
+            <option>Income / Expense</option>
+            <option>Income</option>
+            <option>Expense</option>
+          </select>
+
+          <select id="type" class="add-Transaction">
+            <option>Select Type</option>
+            <option>Food & Groceries</option>
+            <option>Rent</option>
+            <option>Salary</option>
+            <option>Investment</option>
+            <option>Shopping</option>
+            <option>Entertainment</option>
+            <option>Travel</option>
+            <option>Health</option>
+            <option>Education</option>
+            <option>Miscellaneous</option>
+          </select>
+
+          <input type="date" id="date" class="add-Transaction">
+
+          <button class="add-TransactionBtn">Add Transaction</button>
+        </div>
+      </section>
+
+      <!-- Transactions -->
+      <section class="transactions-section">
+        <div class="section-head common">
+          <h2>Recent Transactions</h2>
+          <a class="viewAll" style="cursor: pointer;">View all</a>
+        </div>
+
+        <div class="panel table-panel tablecommon">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="table-body">
+              <!-- Transactions list -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Bottom Charts -->
+      <section class="bottom-grid common">
+        <div class="panel chart-panel">
+          <h2>Spending Overview</h2>
+
+          <div class="fake-line-chart">
+            <canvas id="lineChart"></canvas>
           </div>
         </div>
 
-        <div class="doughnut-box bgColor">
-          <div class="center-header2">
-            <h3 class="bar-task">Task Completion</h3>
-          </div>
-          <div class="doughnutchart-box">
-            <canvas id="myChart2"></canvas>
+        <div class="panel geminiAI">
+          <h2 class="">AI Suggestions (Beta)</h2>
+          <ul class="list-cont">
+
+            <li>Helo Cute</li>
+            
+          </ul>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="act_pro-container">
-        <div class="activity-box bgColor">
-          <div class="activity-heading">Recent Activities</div>
-          <div class="details-box">
-
-          </div>
-        </div>
-        <div class="activity-box profile-container bgColor">
-          <div class="activity-heading">User Profile</div>
-          <div class="profile-box">
-            <div class="profile-logo"></div>
-          </div>
-          <div class="login-box">
-            <span class="name-head">Jashjeet Singh</span>
-            <span class="email-head">jashjeet99@gmail.com</span>
-            <span class="duration-head">Member since: 2022</span>
-          </div>
-          <div class="editprofile-box">
-            <div class="edit-btn home-btn">Edit Profile</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  </body>
-  <script src="dashboard.js" type="module"></script>
-  <script src="charts.js" type="module"></script>
+    </main>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="./js/dashboard.js"></script>
+<script type="module" src="./js/transactions.js"></script>
+<script type="module" src="./js/charts.js"></script>
 </html>
-
 <!-- Done and Dusted -->
 <!-- :) -->
